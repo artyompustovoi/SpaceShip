@@ -1,0 +1,43 @@
+﻿<Window x:Class="SpaceShip.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpaceShip"
+        mc:Ignorable="d"
+        Title="Settings" Height="515" Width="540" Icon="images/player.png">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="8"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Purple"></Setter>
+            <Setter Property="FontFamily" Value="Elephant"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+
+
+    </Window.Resources>
+    <Canvas x:Name="cnv3" Background="Black">
+        <Image Source="C:\Users\hp\source\repos\SpaceShip\images\Style1.png" Canvas.Left="30" Canvas.Top="115" Height="205" Width="180"></Image>
+        <Image Source="C:\Users\hp\source\repos\SpaceShip\images\Style2.png" Canvas.Left="322" Canvas.Top="115" Height="205" Width="180"></Image>
+        <Button x:Name="Style1" Canvas.Left="61" Canvas.Top="69" RenderTransformOrigin="0.519,9.521" Width="109" Click="Style1_Click">
+            Style 1
+        </Button>
+        <Button x:Name="style2" Canvas.Left="360" Canvas.Top="69" RenderTransformOrigin="0.519,9.521" Width="109" Click="style2_Click">
+            Style 2
+        </Button>
+        <Button x:Name="back" Canvas.Left="201" Canvas.Top="368" RenderTransformOrigin="0.519,9.521" Width="109" Click="back_Click">
+            Back
+        </Button>
+    </Canvas>
+</Window>
